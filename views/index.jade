@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div(class="jumbotron")
+    div(class="text-center")
+      h1 Welcome to Button Counter
+      h3 Total times button clicked:
+      h1(id="count")=counter
+      button(id="increment" class="btn btn-success") Increment
+    div(id="line")
+      h4 Description:
+      p For this app, users are able to click on the increment button to increase the counter. The app will then update the view of all clients on the app to the most current number.
+      h4 Why:
+      p We wanted to learn a bit more about server-push-request. Its very easy for clients to push information into a server, but the other way around is a bit more trciky. We are usisng an http header "keep alive" that keeps the connection to the server. The server is then able to send updates to users
